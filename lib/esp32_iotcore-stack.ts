@@ -1,6 +1,6 @@
 import * as cdk from "aws-cdk-lib";
 import { Construct } from "constructs";
-import { IotSql, TopicRule } from "@aws-cdk/aws-iot-alpha";
+=import { IotSql, TopicRule } from "@aws-cdk/aws-iot-alpha";
 import { CloudWatchPutMetricAction } from "@aws-cdk/aws-iot-actions-alpha";
 
 export class Esp32IotcoreStack extends cdk.Stack {
@@ -27,7 +27,7 @@ export class Esp32IotcoreStack extends cdk.Stack {
         new CloudWatchPutMetricAction({
           metricName: "humidity",
           metricNamespace: "IoT/Esp32/SensorData",
-          metricUnit: "humidity",
+          metricUnit: "Percent",
           metricValue: "${humidity}",
         }),
       ],
