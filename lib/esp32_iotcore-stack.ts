@@ -40,7 +40,7 @@ export class Esp32IotcoreStack extends cdk.Stack {
       namespace: namespace,
       metricName: "co2",
       statistic: Stats.MAXIMUM,
-      period: cdk.Duration.minutes(1),
+      period: cdk.Duration.minutes(5),
     });
 
     co2Metric.createAlarm(this, "Co2Alarm", {
